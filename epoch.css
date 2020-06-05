@@ -1,0 +1,168 @@
+body {
+	background-color: #3E2723;
+	color: #EFEBE9;
+	margin: 0;
+	height: 100vh;
+	display: grid;
+	grid-template-rows: auto auto 1fr auto;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 0.25em;
+}
+
+header a {
+	color: inherit;
+	text-decoration: none;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-weight: bold;
+}
+
+nav a {
+	padding: 0.5em;
+	width: 100%;
+	height: 100%;
+	color: inherit;
+	text-decoration: none;
+	text-align: center;
+}
+
+nav a.current {
+	background-color: #EFEBE9;
+	color: #1B0000;
+}
+
+main {
+	background-color: #EFEBE9;
+	color: #1B0000;
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+}
+
+main.home-page > div {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 25em;
+	max-width: 25em;
+	padding: 1em;
+	padding-bottom: 2em;
+}
+
+main.home-page > div h2 {
+	display: inline;
+	margin-right: 0.5em;
+}
+
+main.home-page > div p {
+	display: inline;
+}
+
+main.home-page > div div {
+	text-align: right;
+}
+
+main.catalog-page h2 {
+	text-align: center;
+}
+
+main.catalog-page > div {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2em;
+	padding: 0.5em;
+	min-width: 25em;
+	max-width: 25em;
+	border: 2px solid #1B0000;
+	border-radius: 1em;
+}
+
+main.catalog-page > div a {
+	color: inherit;
+	text-decoration: none;
+}
+
+main.recipe > article {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+	padding: 1em;
+	max-width: 25em;
+	border: 2px solid #1B0000;
+	border-radius: 1em;
+}
+
+main.recipe h1, main.recipe h2 {
+	text-align: center;
+}
+
+main.recipe > article div.inventory {
+	display: flex;
+	flex-direction: row;
+}
+
+footer {
+	padding: 0.5em;
+	color: #EFEBE9;
+	text-align: center;
+
+}
+
+@media (min-width: 70em) {
+	body {
+		grid-template-columns: auto 1fr;
+		grid-template-rows: auto 1fr auto;
+	}
+
+	header {
+		grid-column: 1 / -1;
+		border-bottom: 1px solid #EFEBE9;
+	}
+
+	nav {
+		flex-direction: column;
+		justify-content: flex-start;
+		border-bottom: 1px solid #EFEBE9;
+	}
+
+	nav a {
+		height: auto;
+		width: auto;
+		padding: 1em;
+		padding-left: 5em;
+		padding-right: 5em;
+	}
+
+	main.home-page > div {
+		min-width: 40em;
+		max-width: 40em;
+	}
+
+	main.catalog-page h2 {
+		text-align: inherit;
+	}
+
+	main.catalog-page > div {
+		padding-left: 2em;
+		min-width: 40em;
+		max-width: 40em;
+	}
+
+	main.recipe > article {
+		min-width: 40em;
+		max-width: 40em;
+	}
+
+	footer {
+		grid-column: 1 / -1;
+	}
+}
+
