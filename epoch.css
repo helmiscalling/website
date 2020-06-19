@@ -5,12 +5,20 @@
  *
  */
 
-/* Default rules.
+/* 
+ * Default rules.
  * For visual content on mobile device screens.
  * Styles semantic elements for basic document structure.
  *
  * Layout is done using Grid for the overal document, and
  * either Flexbox or Grid for each section.
+ *
+ * Some documents have special settings:
+ *   Home Page - The site's home page
+ *   Catalog Page - A list of links, like a catalog
+ *
+ * There are also some general purpose classes for
+ * for ad hoc styling
  *
  */
 
@@ -79,6 +87,22 @@ main {
 	max-width: 25em;
 }
 
+article {
+	margin-bottom: 1em;
+	padding: 1em;
+	border: 2px solid #3E2723;
+	border-radius: 1em;
+}
+
+article h2 {
+	text-align: center;
+}
+
+hr {
+	border-style: solid;
+	border-color: #3E2723;
+}
+
 
 /* Page Footer */
 
@@ -122,6 +146,45 @@ main.home-page blockquote {
 }
 
 
+/* Catalog Page Settings */
+
+main.catalog-page ul {
+	padding: 0;
+}
+
+main.catalog-page ul li{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2em;
+	padding: 0.5em;
+	border: 2px solid #3E2723;
+	border-radius: 1em;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+}
+
+main.catalog-page ul li a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+/* General Purposes Classes */
+
+.flex-direction-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.grid-2-2 {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+}
+
+
 /*
  * Setting for larger screen sizes
  *
@@ -136,6 +199,7 @@ main.home-page blockquote {
 	/* Page Header */
 	header {
 		grid-column: 1 / -1;
+		padding-left: 17em;
 		border-bottom: 1px solid #EFEBE9;
 	}
 
@@ -148,14 +212,12 @@ main.home-page blockquote {
 
 	nav a {
 		height: auto;
-		width: auto;
+		width: 15em;
 		padding: 1em;
-		padding-left: 5em;
-		padding-right: 5em;
 	}
 
-	/* Home Page Settings */
-	main.home-page {
+	/* Page Main Content */
+	main {
 		max-width: 40em;
 	}
 
@@ -163,5 +225,6 @@ main.home-page blockquote {
 	/* Page Footer */
 	footer {
 		grid-column: 1 / -1;
+		padding-left: 17em;
 	}
 }
