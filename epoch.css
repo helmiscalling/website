@@ -83,8 +83,7 @@ main {
 	padding: 2em;
 	margin-left: auto;
 	margin-right: auto;
-	min-width: 25em;
-	max-width: 25em;
+	min-width: 80%;
 }
 
 article {
@@ -173,11 +172,6 @@ main.catalog-page ul li a {
 
 /* General Purposes Classes */
 
-.flex-direction-row {
-	display: flex;
-	flex-direction: row;
-}
-
 .grid-2-2 {
 	display: grid;
 	grid-template-columns: auto auto;
@@ -218,6 +212,7 @@ main.catalog-page ul li a {
 
 	/* Page Main Content */
 	main {
+		min-width: 25em;
 		max-width: 40em;
 	}
 
