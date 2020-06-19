@@ -1,13 +1,34 @@
+/*
+ * epoch.css
+ *
+ * Primary CSS file for website https://www.epochcarnival.club
+ *
+ */
+
+/* Default rules.
+ * For visual content on mobile device screens.
+ * Styles semantic elements for basic document structure.
+ *
+ * Layout is done using Grid for the overal document, and
+ * either Flexbox or Grid for each section.
+ *
+ */
+
 body {
-	background-color: #3E2723;
-	color: #EFEBE9;
+	background-color: #EFEBE9;
+	color: #3E2723;
 	margin: 0;
 	height: 100vh;
 	display: grid;
 	grid-template-rows: auto auto 1fr auto;
 }
 
+
+/* Page Header */
+
 header {
+	background-color: #3E2723;
+	color: #EFEBE9;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -19,7 +40,12 @@ header a {
 	text-decoration: none;
 }
 
+
+/* Page Navigation */
+
 nav {
+	background-color: #3E2723;
+	color: #EFEBE9;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -37,84 +63,69 @@ nav a {
 
 nav a.current {
 	background-color: #EFEBE9;
-	color: #1B0000;
+	color: #3E2723;
 }
 
+
+/* Page Main Content */
+
 main {
-	background-color: #EFEBE9;
-	color: #1B0000;
 	display: flex;
 	flex-direction: column;
 	padding: 2em;
-}
-
-main.home-page > div {
 	margin-left: auto;
 	margin-right: auto;
 	min-width: 25em;
 	max-width: 25em;
-	padding: 1em;
+}
+
+
+/* Page Footer */
+
+footer {
+	background-color: #3E2723;
+	color: #EFEBE9;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+
+/* Home Page Settings */
+
+main.home-page dl {
+	margin: 0;
+	padding: 0;
+}
+
+main.home-page dt {
+	display: inline;
+	margin-right: 0.5em;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+main.home-page dd {
+	margin: 0;
+	display: inline;
+}
+
+main.home-page cite {
+	display: block;
+	text-align: right;
+	padding-top: 0.25em;
 	padding-bottom: 2em;
 }
 
-main.home-page > div h2 {
-	display: inline;
-	margin-right: 0.5em;
+main.home-page blockquote {
+	margin: 0;
 }
 
-main.home-page > div p {
-	display: inline;
-}
 
-main.home-page > div div {
-	text-align: right;
-}
-
-main.catalog-page h2 {
-	text-align: center;
-}
-
-main.catalog-page > div {
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 2em;
-	padding: 0.5em;
-	min-width: 25em;
-	max-width: 25em;
-	border: 2px solid #1B0000;
-	border-radius: 1em;
-}
-
-main.catalog-page > div a {
-	color: inherit;
-	text-decoration: none;
-}
-
-main.recipe > article {
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 1em;
-	padding: 1em;
-	max-width: 25em;
-	border: 2px solid #1B0000;
-	border-radius: 1em;
-}
-
-main.recipe h1, main.recipe h2 {
-	text-align: center;
-}
-
-main.recipe > article div.inventory {
-	display: flex;
-	flex-direction: row;
-}
-
-footer {
-	padding: 0.5em;
-	color: #EFEBE9;
-	text-align: center;
-
-}
+/*
+ * Setting for larger screen sizes
+ *
+ */
 
 @media (min-width: 70em) {
 	body {
@@ -122,11 +133,13 @@ footer {
 		grid-template-rows: auto 1fr auto;
 	}
 
+	/* Page Header */
 	header {
 		grid-column: 1 / -1;
 		border-bottom: 1px solid #EFEBE9;
 	}
 
+	/* Page Navigation */
 	nav {
 		flex-direction: column;
 		justify-content: flex-start;
@@ -141,28 +154,14 @@ footer {
 		padding-right: 5em;
 	}
 
-	main.home-page > div {
-		min-width: 40em;
+	/* Home Page Settings */
+	main.home-page {
 		max-width: 40em;
 	}
 
-	main.catalog-page h2 {
-		text-align: inherit;
-	}
-
-	main.catalog-page > div {
-		padding-left: 2em;
-		min-width: 40em;
-		max-width: 40em;
-	}
-
-	main.recipe > article {
-		min-width: 40em;
-		max-width: 40em;
-	}
-
+	
+	/* Page Footer */
 	footer {
 		grid-column: 1 / -1;
 	}
 }
-
